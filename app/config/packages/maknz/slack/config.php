@@ -10,10 +10,10 @@ return [
   | The endpoint which Slack generates when creating a 
   | new incoming webhook. It will look something like 
   | https://acc.slack.com/services/hooks/incoming-webhook?token=abc
-  | 
+  |
   */
 
-  'endpoint' => 'https://notshinyunicorn.slack.com/services/hooks/incoming-webhook?token=qytiQagt31JbzGFT0aGqsCLh',
+  'endpoint' => $_ENV["SLACK_WEBHOOK"],
 
   /*
   |-------------------------------------------------------------

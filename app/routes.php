@@ -33,7 +33,7 @@ Route::any('/inbound/slack/notshinyunicorn/general', function()
 
         $json = ($objJSON = json_decode($strTest));
 
-        $youtube = new \Madcoda\Youtube(array('key' => 'AIzaSyD2qdh7oWKsk90y8lEoNw6wRVVbvxUh99s'));
+        $youtube = new \Madcoda\Youtube(array('key' => $_ENV["YOUTUBE_KEY"]));
         $videoList = $youtube->searchVideos($json->artists[0]->name." ".$json->name);
 
         if (isset($videoList[0]->id->videoId))
